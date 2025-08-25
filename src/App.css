@@ -1,38 +1,552 @@
-.App {
+/* General Layout and Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #EDEFEE;
+  gap: 40px;
+}
+
+/* Navigation Section */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+nav a {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #495E57;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #EE9972;
+}
+
+/* Main Content Area */
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Footer Section */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  background-color: #495e57;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif; /* A more decorative font for headings */
+  color: #333333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Specific style for the main heading */
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Styling for paragraph text */
+p {
+  font-family: 'Karla', sans-serif; /* A clean sans-serif for body text */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495E57; /* Dark green for paragraph text */
+}
+
+/* Image Styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  transition: all .3s;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 0;
+  transition: none;
+}
+
+/* Call to Action Section */
+.cta {
+  background-color: #495E57;
+  color: white;
+  padding: 80px 40px;
+}
+
+.cta-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cta-text {
+  text-align: left;
+  padding-right: 20px;
+}
+
+.cta h1 {
+  color: #F4CE14;
+  margin-bottom: 5px;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.cta-text h3 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.cta p {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.cta button {
+  background-color: #F4CE14;
+  color: #495E57;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 16px;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.cta button:hover {
+  background-color: #EE9972;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cta-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cta-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all .3s;
+}
+
+/* Specials Section */
+.specials {
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.specials h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.special-card {
+  background-color: #EDEFEE;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.special-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: all .3s;
+}
+
+.special-card:hover {
+  transform: translateY(-5px);
+}
+
+.special-card h3 {
+  color: #495E57;
+  margin-bottom: 10px;
+}
+
+.special-card p {
+  margin-bottom: 15px;
+}
+
+.special-card span {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  color: #EE9972;
+  font-size: 1.2rem;
+}
+
+/* Booking Page Styles */
+.booking-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.booking-page h1 {
+  text-align: center;
+  color: #495E57;
+  margin-bottom: 10px;
+}
+
+.booking-page p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #495E57;
+}
+
+.booking-form {
+  background-color: #EDEFEE;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  color: #495E57;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #F4CE14;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #F4CE14;
+  color: #495E57;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #EE9972;
+  color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .cta-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .cta-text {
+    text-align: center;
+  }
+
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form {
+    padding: 20px;
+  }
+}
+
+/* CustomersSay Section */
+.customers-say {
+  background-color: #495E57;
+  padding: 60px 20px;
+}
+
+.customers-say .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.customers-say h2 {
+  text-align: center;
+  color: #F4CE14;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.rating {
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin: 0 2px;
+}
+
+.star.filled {
+  color: #F4CE14;
+}
+
+.review {
+  font-style: italic;
+  color: #495E57;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.customer-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all .3s;
+}
+
+.customer-name {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  color: #495E57;
+}
+
+/* Chicago Section */
+.chicago {
+  background-color: #EDEFEE;
+  padding: 60px 20px;
+}
+
+.chicago .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chicago-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.chicago-text h2 {
+  color: #F4CE14;
+  font-size: 3rem;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.chicago-text h3 {
+  color: #495E57;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.chicago-text p {
+  color: #495E57;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.chicago-images {
+  position: relative;
+  height: 400px;
+}
+
+.chicago-img-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 160%;
+  object-fit: cover;
+  border-radius: 16px;
+  z-index: 2;
+  transition: all .3s;
+}
+
+.chicago-img-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+/* Enhanced Navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #495E57;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+nav a:hover {
+  color: #EE9972;
+}
+
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #EE9972;
+}
+
+/* Enhanced Media Queries */
+@media (max-width: 768px) {
+  .chicago-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .chicago-images {
+    height: 300px;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .customers-say h2 {
+    font-size: 2rem;
+  }
+  
+  .chicago-text h2 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    gap: 15px;
+  }
+  
+  nav a {
+    font-size: 0.9rem;
   }
 }
