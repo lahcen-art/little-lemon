@@ -2,11 +2,11 @@ import food1 from "../img/food1.avif";
 
 export default function Chicago() {
   return (
-    <section className="chicago">
+    <section className="chicago" aria-labelledby="about-heading">
       <div className="container">
         <div className="chicago-content">
           <div className="chicago-text">
-            <h2>Little Lemon</h2>
+            <h2 id="about-heading">Little Lemon</h2>
             <h3>Chicago</h3>
             <p>
               Little Lemon is a charming neighborhood bistro that serves simple food 
@@ -27,7 +27,7 @@ export default function Chicago() {
           <div className="chicago-images">
             <img 
               src={food1}
-              alt="Little Lemon delicious food" 
+              alt="Beautifully plated Mediterranean dish featuring fresh ingredients and vibrant colors" 
               className="chicago-img-1"
             />
             {/* <img 

@@ -11,8 +11,8 @@ header {
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  background-color: #EDEFEE;
-  gap: 40px;
+  background-color: white;
+  gap: 120px;
 }
 
 /* Navigation Section */
@@ -29,7 +29,7 @@ nav a {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
-  color: #495E57;
+  color: #17a576;
   transition: color 0.3s ease;
 }
 
@@ -43,19 +43,208 @@ main {
   padding: 20px;
 }
 
-/* Footer Section */
-footer {
+/* Professional Footer Styles */
+.professional-footer {
   margin-top: auto;
-  padding: 20px;
-  background-color: #495e57;
-  color: white;
-  text-align: center;
+  background-color: #ffffff; 
+  color: rgb(20, 20, 20);
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.footer-description {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #0c0c0c;
+  margin: 0;
+}
+
+.footer-center {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.footer-section h4 {
+  font-family: 'Markazi Text', serif;
+  font-size: 1.5rem;
+  color: #F4CE14;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  font-family: 'Karla', sans-serif;
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #F4CE14;
+}
+
+.footer-section address {
+  font-style: normal;
+}
+
+.footer-section address p {
+  font-family: 'Karla', sans-serif;
+  color: #000000;
+  margin: 5px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #000000;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(244, 206, 20, 0.1);
+}
+
+.social-links a:hover {
+  color: #F4CE14;
+  background-color: rgba(244, 206, 20, 0.2);
+}
+
+.hours p {
+  font-family: 'Karla', sans-serif;
+  color: #000000;
+  margin: 5px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(224, 224, 224, 0.2);
+  margin-top: 40px;
+  padding-top: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  font-family: 'Karla', sans-serif;
+  color: #271c1c;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  font-family: 'Karla', sans-serif;
+  color: #230f0f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #F4CE14;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-center {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-right {
+    gap: 20px;
+  }
+  
+  .footer-logo {
+    width: 120px;
+    margin: 0 auto 0px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-legal {
+    justify-content: center;
+  }
 }
 
 /* Styling for all headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Markazi Text', serif; /* A more decorative font for headings */
-  color: #333333;
+  font-family: 'Markazi Text', serif; /* Consistent decorative font for all titles */
+  color: #F4CE14;
 }
 
 /* Specific style for the main heading */
@@ -83,7 +272,7 @@ img {
 .logo {
   height: 50px;
   border-radius: 0;
-  transition: none;
+  transition: all 0.5s;
 }
 
 /* Call to Action Section */
@@ -115,11 +304,37 @@ img {
   line-height: 1.1;
 }
 
+.cta h2 {
+  color: #F4CE14;
+  margin-bottom: 5px;
+  font-size: 5rem; 
+  font-weight: 500;
+  line-height: 1.1;
+  background: linear-gradient(45deg, #F4CE14, #FFD700, #FFF700, #F4CE14);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .cta-text h3 {
   color: white;
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 20px;
-  margin-top: 0;
+  margin-top: 5px;
   font-weight: 400;
 }
 
@@ -403,11 +618,12 @@ img {
 }
 
 .customer-image {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   transition: all .3s;
+  border: 3px solid #F4CE14;
 }
 
 .customer-name {
@@ -436,14 +652,14 @@ img {
 
 .chicago-text h2 {
   color: #F4CE14;
-  font-size: 3rem;
-  margin-bottom: 0;
-  line-height: 1;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .chicago-text h3 {
   color: #495E57;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   margin-top: 0;
 }
@@ -625,6 +841,66 @@ nav a:hover::after {
   color: #721c24;
 }
 
+/* Form validation styles */
+.form-group input.error,
+.form-group select.error {
+  border: 2px solid #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.3);
+  background-color: #fff5f5;
+}
+
+.form-group input.success,
+.form-group select.success {
+  border: 2px solid #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+  background-color: #f8fff8;
+}
+
+/* Enhanced select element styling for validation */
+.form-group select.error:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  outline: none;
+}
+
+.form-group select.success:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  outline: none;
+}
+
+/* Select element default state enhancement */
+.form-group select {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+/* Date Validation Styles */
+.error-message {
+  display: block;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.form-group input:focus.error,
+.form-group select:focus.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Success state for valid inputs */
+.form-group input:valid:not(:placeholder-shown),
+.form-group select:valid:not([value=""]) {
+  border-color: #28a745;
+}
+
+.form-group input:valid:not(:placeholder-shown):focus,
+.form-group select:valid:not([value=""]):focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
 @media (max-width: 768px) {
   .bookings-table-section {
     padding: 1rem 0;
@@ -634,5 +910,200 @@ nav a:hover::after {
   .bookings-table td {
     padding: 8px 12px;
     font-size: 0.9rem;
+  }
+  
+  .error-message {
+    font-size: 0.8rem;
+  }
+}
+
+/* Accessibility improvements */
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Enhanced focus indicators */
+*:focus {
+  outline: 2px solid #495e57;
+  outline-offset: 2px;
+}
+
+/* Button and link focus states */
+button:focus,
+a:focus {
+  outline: 2px solid #f4ce14;
+  outline-offset: 2px;
+}
+
+/* Form error states */
+.error {
+  border-color: #d32f2f !important;
+  background-color: #ffeaea;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .error-message {
+    font-weight: bold;
+  }
+  
+  .status {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .skip-link {
+    transition: none;
+  }
+}
+
+/* Table accessibility */
+.table-container:focus {
+  outline: 2px solid #495e57;
+  outline-offset: 2px;
+}
+
+th[scope="col"],
+th[scope="row"] {
+  font-weight: bold;
+}
+
+/* Form fieldset styling */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Improve color contrast for status indicators */
+.status.confirmed {
+  background-color: #2e7d32;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.status.pending {
+  background-color: #f57c00;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Rating accessibility */
+.star[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Subtitle styling for hero section */
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495e57;
+  margin: 0.5rem 0;
+}
+
+/* Price accessibility */
+.price {
+  font-weight: bold;
+  color: #495e57;
+}
+
+/* Address styling */
+address {
+  font-style: normal;
+}
+
+/* Enhanced navigation accessibility */
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #f4ce14;
+  color: #495e57;
+  transform: translateY(-2px);
+}
+
+/* Navigation icon styling */
+nav svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s;
+}
+
+nav a:hover svg,
+nav a:focus svg {
+  transform: scale(1.1);
+}
+
+/* Responsive navigation icons */
+@media (max-width: 600px) {
+  nav a span {
+    display: none;
+  }
+  
+  nav svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  nav a {
+    padding: 0.75rem;
+    justify-content: center;
   }
 }

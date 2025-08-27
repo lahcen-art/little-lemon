@@ -9,11 +9,12 @@ import Logo from "./img/Logo.svg";
 function App() {
   return (
     <div className="container">
-      <header>
-        <img src={Logo} alt="Little Lemon Logo" className="logo" />
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <header role="banner">
+        <img src={Logo} alt="Little Lemon Restaurant Logo" className="logo" />
         <Nav />
       </header>
-      <main>
+      <main id="main-content" role="main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/booking" element={<BookingPage />} />
