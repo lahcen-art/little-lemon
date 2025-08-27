@@ -47,7 +47,7 @@ main {
 .professional-footer {
   margin-top: auto;
   background-color: #ffffff; 
-  color: rgb(20, 20, 20);
+  color: rgb(20, 20, 20); 
   padding: 60px 0 20px;
 }
 
@@ -372,7 +372,7 @@ img {
 
 .cta-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
