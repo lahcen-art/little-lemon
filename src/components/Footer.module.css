@@ -1,0 +1,112 @@
+.footer {
+    background-color: #9aaca5;
+    color: #EDEFEE;
+    /* Reduced vertical padding */
+    padding: 0.6rem 5%;
+    font-family: 'Karla', sans-serif;
+  }
+  
+  .footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Reduced gap between columns */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footerSection {
+    flex: 1;
+    min-width: 180px; /* Slightly smaller min-width */
+  }
+  
+  /* Special styling for the first branding section */
+  #branding {
+    flex-basis: 280px;
+    flex-grow: 2;
+  }
+  
+  .footerLogo {
+    /* Smaller logo */
+    max-width: 120px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .footerSection h4 {
+    font-family: 'Markazi Text', serif;
+    /* Smaller heading font size */
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #F4CE14;
+    /* Reduced margin below heading */
+    margin-bottom: 0.75rem;
+  }
+  
+  .footerSection p, .footerSection address {
+    font-style: normal;
+    line-height: 1.5; /* Tighter line height */
+    font-size: 0.9rem; /* Slightly smaller paragraph text */
+  }
+  
+  .footerSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerSection a {
+    color: #EDEFEE;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.4rem; /* Tighter list item spacing */
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .footerSection a:hover,
+  .footerSection a:focus {
+    color: #F4CE14;
+    text-decoration: underline;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialLinks a svg {
+    width: 22px; /* Slightly smaller icons */
+    height: 22px;
+    transition: fill 0.2s ease-in-out;
+  }
+  
+  .socialLinks a:hover svg,
+  .socialLinks a:focus svg {
+    fill: #F4CE14;
+  }
+  
+  .footerBottom {
+    text-align: center;
+    /* Reduced top margin and padding */
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #495E57;
+    font-size: 0.85rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footerSection ul {
+      margin-bottom: 1.5rem;
+    }
+  
+    .socialLinks {
+      justify-content: center;
+    }
+  }
