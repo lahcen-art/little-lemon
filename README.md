@@ -2,6 +2,37 @@
 
 *Transforming Dining Experiences with Seamless Innovation*
 
+Back-end Developer Capstone Project: Little Lemon Web Application
+
+Description:
+This project is a Django REST Framework API for the Little Lemon restaurant with endpoints for menu management, table bookings, and user authentication.
+
+API paths to test:
+/api/menu/
+/api/bookings/
+/api/registration/
+/api/auth/
+
+Setup:
+- Clone this repo
+- Install dependencies with pip install -r requirements.txt
+- Configure MySQL database in settings.py
+- Run migrations with python manage.py migrate
+
+Usage:
+- Register a user via /api/registration/
+- Authenticate and obtain token via /api/auth/
+- Access menu and bookings endpoints with appropriate HTTP methods
+
+Testing:
+- Run unit tests with python manage.py test
+- Test APIs using Insomnia REST client
+
+Notes:
+- Ensure MySQL is running and accessible.
+- API requires user authentication for some endpoints.
+
+
 ![last commit](https://img.shields.io/badge/last%20commit-today-brightgreen) 
 ![javascript](https://img.shields.io/badge/javascript-83.4%25-yellow) 
 ![languages](https://img.shields.io/badge/languages-3-blue)
