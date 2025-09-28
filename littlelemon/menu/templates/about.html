@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Little Lemon{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <h1>Our Story</h1>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Welcome to Little Lemon, a family-owned Mediterranean restaurant focused on traditional recipes served with a modern twist. Our chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12-15 items that they rotate seasonally.</p>
+            
+            <h2>Our History</h2>
+            <p>Founded in 2010 by brothers Mario and Adrian, Little Lemon has been serving the community with love and dedication for over a decade. What started as a small family restaurant has grown into a beloved local establishment known for its authentic flavors and warm hospitality.</p>
+            
+            <h2>Our Philosophy</h2>
+            <p>We believe in using only the freshest ingredients, sourced locally whenever possible. Our menu changes with the seasons, ensuring that we're always serving dishes made with produce at its peak flavor.</p>
+            
+            <h2>Meet Our Chefs</h2>
+            <div class="chefs">
+                <div class="chef">
+                    <h3>Mario</h3>
+                    <p>Head Chef & Co-owner</p>
+                    <p>With over 20 years of culinary experience, Mario brings traditional family recipes to life with his expert touch.</p>
+                </div>
+                <div class="chef">
+                    <h3>Adrian</h3>
+                    <p>Pastry Chef & Co-owner</p>
+                    <p>Adrian's passion for baking has won us numerous awards, and his desserts are the perfect ending to any meal.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image">
+            <img src="/static/images/restaurant-interior.jpg" alt="Little Lemon restaurant interior" class="restaurant-image">
+            <div class="hours">
+                <h3>Opening Hours</h3>
+                <p><strong>Monday - Friday:</strong> 11:00 AM - 10:00 PM</p>
+                <p><strong>Saturday:</strong> 10:00 AM - 11:00 PM</p>
+                <p><strong>Sunday:</strong> 10:00 AM - 9:00 PM</p>
+                <a href="{% url 'book' %}" class="reservation-button">Make a Reservation</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.restaurant-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hours {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hours h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #f4ce14;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.chefs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.chef {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chef h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.chef p {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.reservation-button {
+    display: inline-block;
+    background-color: #f4ce14;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.reservation-button:hover {
+    background-color: #e6c413;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-top: 2rem;
+    }
+}
+</style>
+{% endblock %}

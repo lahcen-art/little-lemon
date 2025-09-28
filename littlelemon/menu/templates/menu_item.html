@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ item.name }} - Little Lemon{% endblock %}
+
+{% block content %}
+<article class="menu-item-detail">
+    <h1>{{ item.name }}</h1>
+    <div class="item-details">
+        {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{{ item.name }}" class="item-image">
+        {% endif %}
+        <div class="item-info">
+            <p class="price">Price: ${{ item.price }}</p>
+            <p class="description">{{ item.description }}</p>
+        </div>
+    </div>
+    <a href="{% url 'menu' %}" class="back-link">← Back to Menu</a>
+</article>
+
+<style>
+.menu-item-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.item-details {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: flex-start;
+}
+
+.item-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.item-info {
+    flex: 1;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .item-details {
+        flex-direction: column;
+    }
+    
+    .item-image {
+        max-width: 100%;
+    }
+}
+</style>
+{% endblock %}

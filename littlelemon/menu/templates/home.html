@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Little Lemon{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Little Lemon</h1>
+        <p class="tagline">Delicious food made with love and fresh ingredients</p>
+        <a href="{% url 'menu' %}" class="cta-button">View Our Menu</a>
+        <a href="{% url 'book' %}" class="cta-button secondary">Book a Table</a>
+    </div>
+</section>
+
+<section class="featured-items">
+    <h2>Featured Dishes</h2>
+    <div class="item-grid">
+        {% for item in featured_items|slice:":3" %}
+        <div class="featured-item">
+            <h3>{{ item.name }}</h3>
+            <p class="price">${{ item.price }}</p>
+            <p>{{ item.description|truncatewords:15 }}</p>
+            <a href="{% url 'menu_item' item.id %}" class="view-details">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<style>
+.hero {
+    background-color: #f4ce14;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+.cta-button.secondary {
+    background-color: #f4ce14;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.featured-items {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-items h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.featured-item {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.featured-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    color: #f4ce14;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .item-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-button {
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 200px;
+    }
+}
+</style>
+{% endblock %}

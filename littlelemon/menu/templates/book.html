@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+
+{% block title %}Book a Table - Little Lemon{% endblock %}
+
+{% block content %}
+<section class="booking-section">
+    <h1>Reserve a Table</h1>
+    
+    <div class="booking-container">
+        <div class="booking-form">
+            <h2>Make a Reservation</h2>
+            <form method="post" class="reservation-form">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Time *</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select Time</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="12:30">12:30 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="13:30">1:30 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="1">1 person</option>
+                            <option value="2" selected>2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5 people</option>
+                            <option value="6">6 people</option>
+                            <option value="7">7 people</option>
+                            <option value="8">8 people</option>
+                            <option value="9">9 people</option>
+                            <option value="10">10 people</option>
+                            <option value="11">11+ people (Large Party)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="special-requests">Special Requests (Optional)</label>
+                    <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
+        </div>
+        
+        <div class="booking-info">
+            <h3>Reservation Information</h3>
+            <p>We accept reservations for up to 10 people. For larger parties, please call us directly.</p>
+            
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Email:</strong> reservations@littlelemon.com</p>
+                <p><strong>Address:</strong> 123 Lemon Street, Foodie City, FC 12345</p>
+            </div>
+            
+            <div class="hours">
+                <h4>Opening Hours</h4>
+                <p><strong>Monday - Friday:</strong> 11:00 AM - 10:00 PM</p>
+                <p><strong>Saturday:</strong> 10:00 AM - 11:00 PM</p>
+                <p><strong>Sunday:</strong> 10:00 AM - 9:00 PM</p>
+            </div>
+            
+            <div class="cancellation-policy">
+                <h4>Cancellation Policy</h4>
+                <p>Please notify us at least 2 hours in advance if you need to cancel or modify your reservation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.booking-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.booking-container {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.booking-form {
+    flex: 2;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.booking-info {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f4ce14;
+    box-shadow: 0 0 0 2px rgba(244, 206, 20, 0.2);
+}
+
+.submit-button {
+    background-color: #f4ce14;
+    color: #333;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e6c413;
+}
+
+.booking-info h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #f4ce14;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.contact-info,
+.hours,
+.cancellation-policy {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-info h4,
+.hours h4,
+.cancellation-policy h4 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-info p,
+.hours p,
+.cancellation-policy p {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-row .form-group {
+        margin-bottom: 1.5rem;
+    }
+}
+</style>
+{% endblock %}
